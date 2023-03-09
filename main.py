@@ -23,7 +23,7 @@ class LanderEnv(Env):
     def __init__(self):
         super().__init__()
         # key: dytpe = int, max = 4
-        # time: dtype = int, max = 3
+        # time: dtype = float, max = 3
         self.action_space = Box(low=np.array([-1.0, -1.0]), high=np.array([1.0, 1.0]), dtype=float)
         self.observation_space = Box(low=-float("inf"), high=float("inf"), shape=(3,))
         self.screen_capture = mss()
