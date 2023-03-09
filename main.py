@@ -28,7 +28,7 @@ class LanderEnv(Env):
         self.observation_space = Box(low=-float("inf"), high=float("inf"), shape=(3,))
         self.screen_capture = mss()
         self.game_over_area = {'top': 256, 'left': 261, 'width': 600, 'height': 120}
-        self.driver.get("http://127.0.0.1:5500/")
+        self.driver.get("<URL>")
         self.driver.maximize_window()
 
     @cached_property
